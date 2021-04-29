@@ -1,0 +1,11 @@
+@import url('./normalize.css');
+@import url('./general.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./sections.css');
+@import url('./features.css');
+@import url('./pricelist.css');
+@import url('./work-steps.css');
+@import url('./reviews.css');
+@import url('./gallery.css');
+@import url('./footer.css')

@@ -1,0 +1,91 @@
+.footer {
+  color: rgb(226, 226, 226);
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+  box-sizing: border-box;
+  background-color: rgb(27, 27, 27);
+  padding: 2rem 1rem;
+}
+
+@media screen and (min-width: 576px) {
+  .footer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    padding-left: calc(50vw - 360px);
+    padding-right: calc(50vw - 360px);
+  }
+}
+@media screen and (min-width: 992px) {
+  .footer {
+    padding-left: calc(50vw - 480px);
+    padding-right: calc(50vw - 480px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-left: calc(50vw - 590px);
+    padding-right: calc(50vw - 590px);
+  }
+}
+@media screen and (min-width: 1400px) {
+  .footer {
+    padding-left: calc(50vw - 650px);
+    padding-right: calc(50vw - 650px);
+  }
+}
+
+.footer-heading {
+  margin-bottom: 2rem;
+}
+
+.footer-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.footer-form input,
+.footer-form textarea {
+  background-color: rgb(245, 245, 245);
+  width: 100%;
+  max-width: 300px;
+  border: none;
+  padding: 0.7rem 1rem;
+  border: 2px solid #fff;
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus {
+  outline: none;
+  border: 2px solid #bb4242;
+}
+
+.footer-contacts__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-contacts__list li a {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-contacts__list li a:hover {
+  color: #e47171;
+}
+
+.footer-contacts__list li svg {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+  margin-right: 0.5rem;
+}

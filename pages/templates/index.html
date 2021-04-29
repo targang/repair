@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru-ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ремонт квартир</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav__mobile-wrapper">
+          <div class="logo">
+            <img src="{% static 'img/logo.png' %}" alt="Logo" />
+          </div>
+          <button class="nav-toggler">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24px"
+              height="24px"
+            >
+              <path
+                d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <ul class="nav-list">
+          <li class="nav-list__item"><a href="#pricing">Цены на ремонт</a></li>
+          <li class="nav-list__item">
+            <a href="#steps-section">Этапы работ</a>
+          </li>
+          <li class="nav-list__item"><a href="#about">О нас</a></li>
+          <li class="nav-list__item"><a href="#contacts">Контакты</a></li>
+          <li class="nav-list__item"><a href="#gallery-section">Галерея</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div
+        style="background-image: url('{% static 'img/hero-background.jpg' %}')"
+        class="hero-bg"
+      ></div>
+      <div class="hero-inner">
+        <h1 class="hero-inner__heading">Ремонт квартир</h1>
+        <div class="text-divider"></div>
+        <p class="hero-inner__text">
+          Делаем качественный ремонт в квартирах, домах и офисах
+        </p>
+        <a class="btn_primary" href="#order-form">Оставить заявку</a>
+      </div>
+    </section>
+
+    <section class="white-section">
+      <div class="features">
+        <div class="features-item">
+          <img
+            class="features-item__icon"
+            src="{% static 'img/icons/wallet.png' %}"
+          />
+          <h2 class="features-item__heading">Без предоплаты</h2>
+          <p class="features-item__text">
+            Платите только за реальный результат
+          </p>
+        </div>
+
+        <div class="features-item">
+          <img
+            class="features-item__icon"
+            src="{% static 'img/icons/timer.png' %}"
+          />
+          <h2 class="features-item__heading">Соблюдение сроков</h2>
+          <p class="features-item__text">
+            Все работы будут выполнены качественно и в срок
+          </p>
+        </div>
+
+        <div class="features-item">
+          <img
+            class="features-item__icon"
+            src="{% static 'img/icons/prize.png' %}"
+          />
+          <h2 class="features-item__heading">Гарантия качества</h2>
+          <p class="features-item__text">
+            На все виды работ распространяется гарантия от 2 лет
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gray-section" id="steps-section">
+      <h1 class="section-heading">Этапы работ</h1>
+      <div class="work-steps">
+        <div class="tabs-header">
+          <label class="tabs-header__label" data-step="1" for="work-step1">
+            <input
+              type="radio"
+              class="tabs-header__input"
+              name="work-steps"
+              id="work-step1"
+              value="1"
+              checked
+            />
+            <div class="tabs-header__badge">1</div>
+            <p class="tabs-header__title">Подготовка к ремонту</p>
+          </label>
+
+          <label class="tabs-header__label" data-step="2" for="work-step2">
+            <input
+              type="radio"
+              class="tabs-header__input"
+              name="work-steps"
+              id="work-step2"
+              value="2"
+            />
+            <div class="tabs-header__badge">2</div>
+            <p class="tabs-header__title">Черновые работы</p>
+          </label>
+
+          <label class="tabs-header__label" data-step="3" for="work-step3">
+            <input
+              type="radio"
+              class="tabs-header__input"
+              name="work-steps"
+              id="work-step3"
+              value="3"
+            />
+            <div class="tabs-header__badge">3</div>
+            <p class="tabs-header__title">Чистовая отделка</p>
+          </label>
+
+          <label class="tabs-header__label" data-step="4" for="work-step4">
+            <input
+              type="radio"
+              class="tabs-header__input"
+              name="work-steps"
+              id="work-step4"
+              value="4"
+            />
+            <div class="tabs-header__badge">4</div>
+            <p class="tabs-header__title">Сдача проекта</p>
+          </label>
+        </div>
+        <div class="work-step-content">
+          <div id="work-step-1" class="work-step-item work-step-item_active">
+            <img
+              class="work-step-item__img"
+              src="{% static 'img/step1.jpg' %}"
+              alt="Подготовка к ремонту"
+            />
+            <div class="work-step-item__text">
+              <ul>
+                <li>Встреча с прорабом и замер помещений квартиры</li>
+                <li>Подготовка предварительной сметы (точность 90%)</li>
+                <li>Встреча и консультация с дизайнером интерьеров</li>
+                <li>Разработка дизайна-интерьера квартиры</li>
+                <li>Подготовка детальной сметы ремонта (цена фиксируется)</li>
+              </ul>
+              <a class="btn_primary" href="#order-form">Оставить заявку</a>
+            </div>
+          </div>
+
+          <div id="work-step-2" class="work-step-item">
+            <img
+              class="work-step-item__img"
+              src="{% static 'img/step2.jpg' %}"
+              alt="Подготовка к ремонту"
+            />
+            <div class="work-step-item__text">
+              <ul>
+                <li>Закупка и доставка черновых материалов на объект</li>
+                <li>Планировочные работы: демонтаж и монтаж перегородок</li>
+                <li>Устройство электрики и слаботочных сетей</li>
+                <li>Устройство водоснабжения и канализации</li>
+                <li>Оштукатуриване стен, устройство стяжек по полу</li>
+              </ul>
+              <a class="btn_primary" href="#order-form">Оставить заявку</a>
+            </div>
+          </div>
+
+          <div id="work-step-3" class="work-step-item">
+            <img
+              class="work-step-item__img"
+              src="{% static 'img/step3.jpg' %}"
+              alt="Подготовка к ремонту"
+            />
+            <div class="work-step-item__text">
+              <ul>
+                <li>Шпатлевка и покраска стен</li>
+                <li>Устройство потолков (ГКЛ, натяжные)</li>
+                <li>Плиточные работы: стены, полы, рабочие зоны</li>
+                <li>Установка межкомнатных дверей в квартире</li>
+                <li>Уборка и вывоз строительного мусора</li>
+              </ul>
+              <a class="btn_primary" href="#order-form">Оставить заявку</a>
+            </div>
+          </div>
+
+          <div id="work-step-4" class="work-step-item">
+            <img
+              class="work-step-item__img"
+              src="{% static 'img/step4.jpg' %}"
+              alt="Подготовка к ремонту"
+            />
+            <div class="work-step-item__text">
+              <ul>
+                <li>Монтаж осветительных приборов</li>
+                <li>Закупка мебели, электроники и аксессуаров</li>
+                <li>Обстановка в соответствии с проектом</li>
+                <li>Уборка клининговой компанией</li>
+                <li>Сдача работ заказчику</li>
+              </ul>
+              <a class="btn_primary" href="#order-form">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="white-section reviews-section"
+      style="background-color: transparent"
+      id="about"
+    >
+      <div
+        style="
+          background-image: url('{% static 'img/reviews-background.jpg' %}');
+        "
+        class="hero-bg"
+      ></div>
+      <div class="reviews-bg"></div>
+      <h1 class="section-heading">Качественный ремонт квартир</h1>
+      <div class="text-divider"></div>
+      <p class="reviews-text">
+        При выборе квартиры в новостройке часто предпочтение отдается жилью без
+        отделки. Это связано с тем, что цена на такую недвижимость намного ниже,
+        чем на квартиры с ремонтом. Кроме того, это прекрасная возможность
+        выполнить все ремонтно-отделочные работы с учетом собственных пожеланий,
+        предпочтений и финансовых возможностей.
+      </p>
+      <p class="reviews-text">
+        Вы получите приятные впечатления, если поручите выполнение ремонта
+        специалистам нашей компании. Мы предлагаем большой набор качественных
+        услуг в комплексе. Вам остается лишь выбрать необходимые работы из
+        перечня. Мы позаботимся о том, чтобы ваше жилище полностью
+        соответствовало вашим представлениям об идеальном и стало полностью
+        отвечать требуемому уровню комфорта.
+      </p>
+      <p class="reviews-text">
+        Наш дизайнер, который разрабатывает проект ремонта и отделки квартиры,
+        сопровождает все стадии выполнения ремонта. Благодаря такому подходу мы
+        можем гарантировать, что каждая мелочь, предусмотренная в проекте, при
+        отделке, будет воплощена в жизнь.
+      </p>
+    </section>
+
+    <section class="white-section" id="pricing">
+      <h1 class="section-heading">Наши услуги</h1>
+      <div class="pricelist">
+        {% for service in services %}
+        <div class="price-item">
+          <img
+            class="price-item__img"
+            src="https://placeimg.com/300/300/arch"
+            alt="Название услуги"
+          />
+          <h2 class="price-item__heading">{{service.name}}</h2>
+          <div class="text-divider"></div>
+          <p class="price-item__desc">{{service.description}}</p>
+          <p class="price-item__price">{{service.price}}</p>
+          <a class="btn_primary" href="#order-form">Оставить заявку</a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    <section class="gray-section">
+      <h1 class="section-heading" id="gallery-section">Наши работы</h1>
+      <div class="gallery">
+        {% for image in gallery %}
+        <img src="/media/{{ image.image }}" alt="{{ image.alt }}" />
+        {% endfor %}
+      </div>
+    </section>
+    <footer class="footer">
+      <form method="post" action="/create_order" class="footer-form" id="order-form">
+        <h2 class="footer-heading">Оставить заявку</h2>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn_primary">Отправить</button>
+      </form>
+      <div class="footer-contacts" id="contacts">
+        <h2 class="footer-heading">Контакты</h2>
+        <ul class="footer-contacts__list">
+          <li>
+            <a href="#" title="ВКонтакте">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M19,3H5C3.895,3,3,3.895,3,5v14c0,1.105,0.895,2,2,2h14c1.105,0,2-0.895,2-2V5C21,3.895,20.105,3,19,3z M17.907,15.684 l-1.735,0.024c0,0-0.374,0.073-0.864-0.265c-0.649-0.446-1.261-1.606-1.738-1.455c-0.484,0.154-0.469,1.198-0.469,1.198 s0.004,0.184-0.107,0.304c-0.12,0.129-0.355,0.116-0.355,0.116h-0.777c0,0-1.714,0.142-3.225-1.433 c-1.646-1.717-3.1-5.106-3.1-5.106S5.452,8.853,5.543,8.744C5.646,8.623,5.924,8.62,5.924,8.62l1.857-0.009 c0,0,0.175,0.031,0.301,0.123c0.103,0.076,0.162,0.219,0.162,0.219s0.3,0.761,0.698,1.45c0.776,1.343,1.137,1.637,1.4,1.493 c0.384-0.21,0.269-1.898,0.269-1.898s0.007-0.613-0.193-0.886C10.262,8.899,9.969,8.836,9.84,8.82 c-0.105-0.014,0.066-0.257,0.289-0.367c0.334-0.163,0.925-0.173,1.622-0.166c0.543,0.006,0.7,0.039,0.912,0.091 c0.641,0.155,0.423,0.753,0.423,2.188c0,0.46-0.083,1.106,0.248,1.319c0.143,0.092,0.491,0.014,1.36-1.466 c0.413-0.702,0.722-1.527,0.722-1.527s0.068-0.147,0.173-0.21c0.108-0.065,0.253-0.045,0.253-0.045l1.955-0.012 c0,0,0.587-0.071,0.683,0.196c0.1,0.279-0.219,0.93-1.018,1.995c-1.311,1.75-1.457,1.587-0.368,2.599 c1.04,0.967,1.255,1.437,1.291,1.496C18.815,15.627,17.907,15.684,17.907,15.684z"
+                />
+              </svg>
+              <span>@nickname</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M 8 3 C 5.239 3 3 5.239 3 8 L 3 16 C 3 18.761 5.239 21 8 21 L 16 21 C 18.761 21 21 18.761 21 16 L 21 8 C 21 5.239 18.761 3 16 3 L 8 3 z M 18 5 C 18.552 5 19 5.448 19 6 C 19 6.552 18.552 7 18 7 C 17.448 7 17 6.552 17 6 C 17 5.448 17.448 5 18 5 z M 12 7 C 14.761 7 17 9.239 17 12 C 17 14.761 14.761 17 12 17 C 9.239 17 7 14.761 7 12 C 7 9.239 9.239 7 12 7 z M 12 9 A 3 3 0 0 0 9 12 A 3 3 0 0 0 12 15 A 3 3 0 0 0 15 12 A 3 3 0 0 0 12 9 z"
+                />
+              </svg>
+              <span>@nickname</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                  d="M19.077,4.928c-2.082-2.083-4.922-3.134-7.904-2.894C7.164,2.356,3.65,5.144,2.474,8.99 c-0.84,2.748-0.487,5.617,0.881,7.987L2.059,21.28c-0.124,0.413,0.253,0.802,0.67,0.691l4.504-1.207 c1.459,0.796,3.101,1.215,4.773,1.216h0.004c4.195,0,8.071-2.566,9.412-6.541C22.728,11.563,21.762,7.616,19.077,4.928z M16.898,15.554c-0.208,0.583-1.227,1.145-1.685,1.186c-0.458,0.042-0.887,0.207-2.995-0.624c-2.537-1-4.139-3.601-4.263-3.767 c-0.125-0.167-1.019-1.353-1.019-2.581S7.581,7.936,7.81,7.687c0.229-0.25,0.499-0.312,0.666-0.312c0.166,0,0.333,0,0.478,0.006 c0.178,0.007,0.375,0.016,0.562,0.431c0.222,0.494,0.707,1.728,0.769,1.853s0.104,0.271,0.021,0.437s-0.125,0.27-0.249,0.416 c-0.125,0.146-0.262,0.325-0.374,0.437c-0.125,0.124-0.255,0.26-0.11,0.509c0.146,0.25,0.646,1.067,1.388,1.728 c0.954,0.85,1.757,1.113,2.007,1.239c0.25,0.125,0.395,0.104,0.541-0.063c0.146-0.166,0.624-0.728,0.79-0.978 s0.333-0.208,0.562-0.125s1.456,0.687,1.705,0.812c0.25,0.125,0.416,0.187,0.478,0.291 C17.106,14.471,17.106,14.971,16.898,15.554z"
+                />
+              </svg>
+              <span>8 900 000-00-00</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

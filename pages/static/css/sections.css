@@ -1,0 +1,58 @@
+section {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  position: relative;
+}
+
+@media screen and (min-width: 576px) {
+  section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+  }
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding-left: calc(50vw - 360px);
+    padding-right: calc(50vw - 360px);
+    position: relative;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding-left: calc(50vw - 480px);
+    padding-right: calc(50vw - 480px);
+    position: relative;
+  }
+}
+@media screen and (min-width: 1200px) {
+  section {
+    padding-left: calc(50vw - 590px);
+    padding-right: calc(50vw - 590px);
+    position: relative;
+  }
+}
+@media screen and (min-width: 1400px) {
+  section {
+    padding-left: calc(50vw - 650px);
+    padding-right: calc(50vw - 650px);
+    position: relative;
+  }
+}
+.white-section {
+  background: rgb(252, 252, 252);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+.gray-section {
+  background: rgb(235, 235, 235);
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.section-heading {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}

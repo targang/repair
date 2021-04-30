@@ -336,6 +336,13 @@
         </ul>
       </div>
     </footer>
+    {% if request.GET.msg %}
+
+    <div class="message">
+      <div>Заявка отправлена. Мы свяжемся с вами в ближайшее время</div>
+      <button>&times;</button>
+    </div>
+    {% endif %}
     <script src="{% static 'js/main.js' %}"></script>
     <script src="{% static 'js/fslightbox.js' %}"></script>
   </body>

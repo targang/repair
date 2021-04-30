@@ -29,3 +29,59 @@ button {
   border-bottom: 1px solid #e47171;
   margin: 0 auto;
 }
+
+.message {
+  right: 50%;
+  transform: translateX(50%);
+  position: fixed;
+  bottom: 3rem;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  width: 90%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+@media screen and (min-width: 576px) {
+  .message {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .message {
+    width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .message {
+    width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .message {
+    width: 1150px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .message {
+    width: 1250px;
+  }
+}
+
+.message div {
+  flex-basis: 100%;
+}
+
+.message button {
+  background: transparent;
+  border: none;
+  color: #bb4242;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.message button:focus {
+  outline: none;
+}

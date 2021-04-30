@@ -45,6 +45,7 @@
       <div
         style="background-image: url('{% static 'img/hero-background.jpg' %}')"
         class="hero-bg"
+        id="heroBg"
       ></div>
       <div class="hero-inner">
         <h1 class="hero-inner__heading">Ремонт квартир</h1>
@@ -282,15 +283,21 @@
       <h1 class="section-heading" id="gallery-section">Наши работы</h1>
       <div class="gallery">
         {% for image in gallery %}
-        <img src="/media/{{ image.image }}" alt="{{ image.alt }}" />
+        <a href="/media/{{ image.image }}" data-fslightbox="gallery">
+          <img src="/media/{{ image.image }}" alt="{{ image.alt }}" />
+        </a>
         {% endfor %}
       </div>
     </section>
     <footer class="footer">
-      <form method="post" action="/create_order" class="footer-form" id="order-form">
+      <form
+        method="post"
+        action="/create_order"
+        class="footer-form"
+        id="order-form"
+      >
         <h2 class="footer-heading">Оставить заявку</h2>
-        {% csrf_token %}
-        {{ form.as_p }}
+        {% csrf_token %} {{ form.as_p }}
         <button class="btn_primary">Отправить</button>
       </form>
       <div class="footer-contacts" id="contacts">
@@ -330,5 +337,6 @@
       </div>
     </footer>
     <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/fslightbox.js' %}"></script>
   </body>
 </html>

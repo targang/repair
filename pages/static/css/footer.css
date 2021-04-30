@@ -53,6 +53,7 @@
 .footer-form textarea {
   background-color: rgb(245, 245, 245);
   width: 100%;
+  box-sizing: border-box;
   max-width: 300px;
   border: none;
   padding: 0.7rem 1rem;

@@ -17,3 +17,20 @@ document.querySelectorAll('.tabs-header__label').forEach((el) => {
 document.querySelector('.nav-toggler').addEventListener('click', () => {
   document.querySelector('.nav-list').classList.toggle('nav-list_expanded');
 });
+
+function simpleParallax (elem, modifier) {
+  let paras = document.querySelectorAll(elem);
+  // for (let i = 0; i < paras.length; i++) {
+  // }
+  const sp = () => {
+      for (let i = 0; i < paras.length; i++) {
+          let x = paras[i].getBoundingClientRect().top / modifier;
+          let y = Math.round(x * 100) / 100;
+          paras[i].style.backgroundPosition = 'center ' + y + 'px';
+      }
+      requestAnimationFrame(sp);
+  }
+  requestAnimationFrame(sp);
+}
+
+simpleParallax('#heroBg', 15)
